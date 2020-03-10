@@ -1,0 +1,207 @@
+.hero {
+    background-image: url('/static/images/coworking_space_banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-hero-dark {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.62);
+    height: 70vh;
+    min-height: 500px;
+}
+
+.banner-input {
+    font-size: 1.15rem;
+}
+
+section {
+    padding: 8rem 0;
+}
+
+.section-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.section-button {
+    font-size: 1.25rem;
+}
+
+
+section.work-location {
+    background: #071821;
+}
+
+.location-image {
+    height: 325px;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.75rem;
+}
+
+.arrow {
+    border: solid #1b4079;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.card-details {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    padding: 0 15px 0px 10px;
+    color:white;
+}
+
+.card {
+    border:0 none;
+}
+
+.card-overlay{
+    width: 100%;
+    height:100%;
+    background: rgb(0,0,0, 0.65);
+}
+
+.location-card {
+    border-radius: 30px;
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-navy-blue {
+    background-color: #1b4079;
+}   
+
+.bg-near-white {
+    background:#f4f4f4;
+}
+
+.text-dark {
+    color: #071821;
+}
+
+.bg-dark {
+    background: #071821 !important;
+}
+
+.text-navy-blue {
+    color: #1b4079;
+}
+
+.date {
+    font-size: 2rem;
+    color:#dc3545;
+}
+
+.badge {
+    font-weight: normal;
+    background:#1b4079;
+    margin-top:6px;
+    padding: 10px;
+    font-size: 1rem;
+    float:right;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1023px){
+    .banner-input:nth-child(-n+2) {
+        margin-top: 10px;
+    }
+
+    .display-4  {
+        font-size: 2.5rem;
+    }
+
+    .section-header {
+        margin-top: 2rem;
+    }
+
+    section {
+        padding: 4.5rem 0;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .banner-input {
+        font-size: 1rem;
+    }
+
+    .banner-input:nth-child(-n+2) {
+        margin-top: 10px;
+    }
+
+    .display-4  {
+        font-size: 2.5rem;
+    }
+
+    .section-header {
+        font-size: 2rem;
+    }
+
+    .section-paragraph, .section-button {
+        font-size: 1.25rem;
+        width: 100%;
+    }
+
+    .section-button{
+        padding: 10px 0px 10px 0px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .location-card {
+        margin-top: 1.5rem;
+    }
+    .news-article-header {
+        padding: 0px 20px;
+    }
+    .privacy-details {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 375px){
+    .display-4 {
+        font-size: 2.25rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .banner-input {
+        font-size: 1rem;
+    }
+
+    .banner-input:nth-child(-n+2) {
+        margin-top: 5px;
+    }
+
+    .display-4  {
+        font-size: 1.75rem;
+    }
+
+    .section-header {
+        font-size: 1.5rem;
+    }
+
+    .section-paragraph, .section-button {
+        font-size: 1rem;
+    }
+}
+
+

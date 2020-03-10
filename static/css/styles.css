@@ -180,6 +180,10 @@ section.work-location {
     .display-4 {
         font-size: 2.25rem;
     }
+    .privacy-details {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
 }
 
 @media only screen and (max-width: 320px){

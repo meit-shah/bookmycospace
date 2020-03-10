@@ -1,5 +1,5 @@
 .hero {
-    background-image: url('/static/images/coworking_space_banner.jpeg');
+    background-image: url('./static/images/coworking_space_banner.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

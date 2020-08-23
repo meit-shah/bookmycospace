@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Book My CoSpace</title>
+        <meta name="description" content="Book my co space is a company thats offers working spaces for co workers and startups all around Mumbai">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./static/css/styles.css">
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/axios"></script>
+    </head>
+    <body>
+        <div class="container" id="app">
+        
+        <div class="row">
+            <div class= "col-12">
+                <h2 class="my-4"> Exploring Cospaces in {{city | uppercase}} </h2>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4" v-for="item,key in info" v-if="item.managerEmail">
+                <div class="card">
+                <img class="card-img-top" :src='item.photos[0]' >
+                <div class="card-body">
+                    <h5 class="card-title">CoSpace #{{ item.gofloatersSpaceName.split(" ")[1] }}</h5>
+                    <p class="card-text">{{ item.address.street }},{{ item.address.landmark }},
+                        {{ item.address.locailty }}{{ item.address.city }} 
+                    </p>
+                    <a href="#" class="btn btn-primary">{{ item.managerEmail }}</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+            new Vue({
+                el: '#app',
+                data () {
+                    return {
+                    info: null,
+                    city:null
+                    }
+                },
+                filters: {
+                    uppercase: function (value) {
+                        if (!value) return ''
+                        value = value.toString()
+                        return value.charAt(0).toUpperCase() + value.slice(1)
+                    }
+                },
+                mounted () {
+                    city = location.href.split("=")[1]
+                    this.city = city
+                    switch(city){
+                        case "mumbai":
+                            req_url = 'https://gofloaters.firebaseapp.com/spaces/nearby?lat=19.0759837&lng=72.8776559';
+                            break;
+                        case "bangalore":
+                            req_url = 'https://gofloaters.firebaseapp.com/spaces/nearby?lat=12.9715987&lng=77.5945627';
+                            break;
+                        case "hyderabad":
+                            req_url = 'https://gofloaters.firebaseapp.com/spaces/nearby?lat=17.385044&lng=78.486671';
+                            break;
+                        case "chennai":
+                            req_url = 'https://gofloaters.firebaseapp.com/spaces/nearby?lat=13.0826802&lng=80.2707184';
+                            break;
+                        default:
+                            req_url = 'https://gofloaters.firebaseapp.com/spaces/nearby?lat=19.0759837&lng=72.8776559';
+                            break;
+                    }
+                    axios
+                    .get(req_url)
+                    .then(response => {
+                            this.info = response.data;
+                            console.log(this.info)
+                        }
+                    )
+                }
+            })
+            
+
+
+        </script>
+    </body>

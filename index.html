@@ -2,283 +2,329 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Book My Co Space</title>
-        <meta name="description" content="Book my co space is a company thats offers working spaces for co workers and startups all around india">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./static/css/styles.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Book My Co Space</title>
+  <meta name="description"
+    content="Book my co space is a company thats offers working spaces for co workers and startups all around india">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./static/css/styles.css">
+</head>
+
+<body>
+  <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top py-3">
-            <div class="container">
-                <a class="navbar-brand text-white font-weight-bold" href="#">BookMyCoSpace</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                <div class="collapse navbar-collapse text-white" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active mx-lg-3">
-                    <a class="nav-link text-white" href="#how-it-works">How It Works<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mx-lg-3">
-                        <a class="nav-link text-white" href="#about">About</a>
-                    </li>
-                    <li class="nav-item mx-lg-3">
-                        <a class="nav-link text-white" href="#locations">Locations</a>
-                    </li>
-                    <li class="nav-item bg-navy-blue px-3 font-weight-bold rounded">
-                        <a class="nav-link text-white rounded book-slot-whatsapp-link">Book Now</a>
-                    </li>
-                </ul>
+  <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand text-white font-weight-bold" href="#">
+        <img src="bookwhite.png" alt="" style="max-height: 70px" ;>
+      </a>
+      <button class="navbar-toggler d-none" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-white d-none" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active mx-lg-3">
+            <a class="nav-link text-white" href="#how-it-works">How It Works<span
+                class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item mx-lg-3">
+            <a class="nav-link text-white" href="#locations">Locations</a>
+          </li>
+          <li class="nav-item bg-navy-blue px-3 font-weight-bold rounded">
+            <a href="/explore" class="nav-link text-white rounded">Explore</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <header class="hero">
+      <div class="home-hero-dark">
+        <div class="container  h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col">
+              <h1
+                class="font-weight-bold display-4 col-lg-7 col-12 text-white pl-0 mt-5">
+                Book a coworking space fast.</h1>
+              <form class="mt-5 bg-white py-4 px-3 rounded" action="/explore"
+                method="GET">
+                <div class="form-row align-items-center">
+                  <div class="col-sm-6">
+                    <label class="sr-only" for="numSeatsInput">Number Of Seats</label>
+                    <input type="number" class="form-control p-3 banner-input"
+                      id="numSeatsInput" placeholder="Number Of Seats">
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="mr-sm-2 sr-only" for="dateTimeInput">DateTime</label>
+                    <input placeholder="Date" type="text" name="datetime"
+                      max="3000-12-31" onfocus="(this.type='date')" id="dateTimeInput"
+                      min="1000-01-01"
+                      class="form-control p-3 banner-input text-secondary">
+                  </div>
+                </div>
+                <div class="form-row mt-2">
+                  <div class="col-sm-6">
+                    <select class="form-control p-3 banner-input" id="cityInput"
+                      name="city" style="height:auto" placeholder="Select City">
+                      <option value="mumbai" selected>Mumbai</option>
+                      <option value="chennai">Chennai</option>
+                      <option value="banglore">Banglore</option>
+                      <option value="hyderabad">Hyderabad</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <a
+                      class="btn btn-primary banner-input px-5 py-3 w-100 rounded font-weight-bold bg-navy-blue text-white text-center ">Find
+                      a Desk</a>
+                  </div>
                 </div>
             </div>
-        </nav>
-        <main>
-            <header class="hero">
-            <div class="home-hero-dark">
-            <div class="container  h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col">
-                        <h1 class="font-weight-bold display-4 col-lg-7 col-12 text-white pl-0 mt-5">Book a coworking space fast.</h1>
-                        <form class="mt-5 bg-white py-4 px-3 rounded">
-                            <div class="form-row align-items-center">
-                                <div class="col-sm-5">
-                                    <label class="sr-only" for="numSeatsInput">Number Of Seats</label>
-                                    <input type="number" class="form-control p-3 banner-input" id="numSeatsInput" placeholder="Number Of Seats">
-                                </div>
-                                <div class="col-sm-4">
-                                    <label class="mr-sm-2 sr-only" for="dateTimeInput">DateTime</label>
-                                    <input placeholder="Date" type="text" name="datetime" max="3000-12-31" onfocus="(this.type='date')"
-                                    id="dateTimeInput" min="1000-01-01" class="form-control p-3 banner-input text-secondary">
-                                </div>
-                                <div class="col-sm-3">
-                                    <a class="btn btn-primary banner-input px-5 py-3 w-100 rounded font-weight-bold bg-navy-blue text-white text-center book-slot-whatsapp-link">Find a Desk</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </header>
+    <section id="#about">
+      <div class="container">
+        <div class="row align-items-center justify-content-around">
+          <div class="col-lg-6">
+            <img src="./static/images/section1_image.jpeg" alt=""
+              class="img-fluid rounded">
+          </div>
+          <div class="col-lg-5">
+            <h2 class="section-header">A place suitable for coworking space.</h2>
+            <p class="lead text-secondary my-4 section-paragraph">We provide best in
+              class rooms for your meetings and provide best co working spaces across
+              the globe</p>
+            <a class="btn btn-lg btn-primary w-70-lg rounded bg-navy-blue section-button"
+              href="#how-it-works">See How It Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="locations" class="work-location">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="section-header text-white">Explore Work Spaces</h2>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-around mt-sm-5 mt-4">
+
+          <div class="col-sm-4 location-card">
+            <a href="explore.html?city=mumbai">
+              <div class="card position-relative">
+                <div class="card-overlay position-absolute"></div>
+                <img class="rounded img-fluid location-image"
+                  src="./static/images/location1.jpeg" alt="Card image">
+                <div class="card-details">
+                  <h4 class="card-title font-weight-bold">Mumbai</h4>
+                  <p class="card-text">25+ spaces</p>
                 </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-4 rounded location-card">
+            <a href="explore.html?city=chennai">
+              <div class="card position-relative">
+                <div class="card-overlay position-absolute"></div>
+                <img class="rounded img-fluid location-image"
+                  src="./static/images/location2.jpg" alt="Card image">
+                <div class="card-details">
+                  <h4 class="card-title font-weight-bold">Chennai</h4>
+                  <p class="card-text">20+ spaces</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-4 location-card">
+            <a href="explore.html?city=bangalore">
+              <div class="card position-relative">
+                <div class="card-overlay position-absolute"></div>
+                <img class="rounded img-fluid location-image"
+                  src="./static/images/location3.jpg" alt="Card image">
+                <div class="card-details">
+                  <h4 class="card-title font-weight-bold">Bangalore</h4>
+                  <p class="card-text">15+ spaces</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="section-header">How It Works ?</h2>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-around mt-5">
+          <div class="col-sm-4">
+            <img src="./static/images/icon1.png" class="mx-auto d-block card-icon"
+              alt="map-pin">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold text-center">Find a Space</h5>
+              <p class="card-text text-secondary text-center">Discover a unique space to
+                meet
+                or work. Simply search by location and filter based on
+                availability and amenities.</p>
             </div>
+          </div>
+          <div class="col-sm-4 mt-sm-0 mt-4">
+            <img src="./static/images/icon2.png" class="mx-auto d-block card-icon"
+              alt="map-pin">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold text-center">Book and confirm</h5>
+              <p class="card-text text-secondary">Book your space, make a payment
+                securely
+                on our trusted platform and we will email you your booking confirmation.
+              </p>
             </div>
-            </header>
-            <section id="#about">
-                <div class="container">
-                    <div class="row align-items-center justify-content-around">
-                        <div class="col-lg-6">
-                            <img src="./static/images/section1_image.jpeg" alt="" class="img-fluid rounded">
-                        </div>
-                        <div class="col-lg-5">
-                            <h2 class="section-header">A place suitable for coworking space.</h2>
-                            <p class="lead text-secondary my-4 section-paragraph">We provide best in class rooms for your meetings and provide best co working spaces across the globe</p>
-                            <a class="btn btn-lg btn-primary w-70-lg rounded bg-navy-blue section-button" href="#how-it-works">See How It Works</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="locations" class="work-location">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h2 class="section-header text-white">Explore Work Spaces</h2>
-                        </div>
-                    </div>  
-                    <div class="row align-items-center justify-content-around mt-sm-5 mt-4">
-                        
-                        <div class="col-sm-4 location-card">
-                            <a href="explore.html?city=mumbai">
-                                <div class="card position-relative">
-                                    <div class="card-overlay position-absolute"></div>
-                                    <img class="rounded img-fluid location-image" src="./static/images/location1.jpeg" alt="Card image">
-                                    <div class="card-details">
-                                        <h4 class="card-title font-weight-bold">Mumbai</h4>
-                                        <p class="card-text">10 spaces</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-sm-4 rounded location-card">
-                            <a href="explore.html?city=chennai">
-                            <div class="card position-relative">
-                                <div class="card-overlay position-absolute"></div>
-                                <img class="rounded img-fluid location-image" src="./static/images/location2.jpg" alt="Card image">
-                                <div class="card-details">
-                                    <h4 class="card-title font-weight-bold">Chennai</h4>
-                                    <p class="card-text">12 spaces</p>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                        <div class="col-sm-4 location-card">
-                            <a href="explore.html?city=bangalore">
-                            <div class="card position-relative">
-                                <div class="card-overlay position-absolute"></div>
-                                <img class="rounded img-fluid location-image" src="./static/images/location3.jpg" alt="Card image">
-                                <div class="card-details">
-                                    <h4 class="card-title font-weight-bold">Bangalore</h4>
-                                    <p class="card-text">15 spaces</p>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="how-it-works">
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <h2 class="section-header">How It Works ?</h2>
-                        </div>
-                    </div>
-                    <div class="row align-items-center justify-content-around mt-5">
-                        <div class="col-sm-4">
-                            <img src="./static/images/icon1.png" class="mx-auto d-block card-icon" alt="map-pin">
-                            <div class="card-body">
-                                <h5 class="card-title font-weight-bold text-center">Find a Space</h5>
-                                <p class="card-text text-secondary text-center">Discover a unique space to meet 
-                                    or work. Simply search by location and filter based on 
-                                    availability and amenities.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 mt-sm-0 mt-4">
-                            <img src="./static/images/icon2.png" class="mx-auto d-block card-icon" alt="map-pin">
-                            <div class="card-body">
-                                <h5 class="card-title font-weight-bold text-center">Book and confirm</h5>
-                                <p class="card-text text-secondary">Book your space, make a payment securely 
-                                    on our trusted platform and we will email you your booking confirmation.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 mt-sm-0 mt-4">
-                            <img src="./static/images/icon3.png" class="mx-auto d-block card-icon" alt="map-pin">
-                            <div class="card-body">
-                                <h5 class="card-title font-weight-bold text-center">Check in and work</h5>
-                                <p class="card-text text-secondary text-center">Your host will be expecting you on the day of check-in.
-                                    Show your booking confirmation and enjoy your experience!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-center text-navy-blue mt-5 font-weight-bold">Learn More <i class="arrow right"></i></p>
-                </div>
-            </section>
-            <section class="bg-dark">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h2 class="section-header text-white">Events and Workshops Near You</h2>
-                        </div>
-                    </div>  
-                    <div class="row align-items-center justify-content-around mt-sm-5 mt-4">
-                        <div class="col-sm-4 location-card">
-                            <div class="card position-relative">
-                                <div class="card-overlay position-absolute"></div>
-                                <img class="rounded img-fluid location-image" src="./static/images/location1.jpeg" alt="Card image">
-                                <div class="card-details">
-                                    <h3 class="event-date"><span class="date">30</span> April <span class="badge">Social</span></h3>
-                                    <h4 class="card-title font-weight-bold">Members Meetup</h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 rounded location-card">
-                            <div class="card position-relative">
-                                <div class="card-overlay position-absolute"></div>
-                                <img class="rounded img-fluid location-image" src="./static/images/location2.jpg" alt="Card image">
-                                <div class="card-details">
-                                    <h3 class="event-date"><span class="date">26</span> April <span class="badge">Workshop</span></h3>
-                                    <h4 class="card-title font-weight-bold">Designers Talk</h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 location-card">
-                            <div class="card position-relative">
-                                <div class="card-overlay position-absolute"></div>
-                                <img class="rounded img-fluid location-image" src="./static/images/location3.jpg" alt="Card image">
-                                <div class="card-details">
-                                    <h3 class="event-date"><span class="date">15</span> April <span class="badge">Finance</span></h3>
-                                    <h4 class="card-title font-weight-bold">Finance Meetup</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h2 class="section-header text-center news-article-header">Get Latest Updates and Articles in your inbox.</h2>
-                <div class="container">
-                    <form class="mt-5 bg-white py-4 px-3 rounded">
-                        <div class="form-row align-items-center justify-content-around container">
-                            <div class="col-sm-9">
-                                <label class="sr-only" for="emailId">Email</label>
-                                <input type="email" class="form-control p-3 banner-input" id="emailId" placeholder="Email Address">
-                            </div>
-                            <div class="col-sm-3">
-                                <button type="submit" class="btn btn-primary banner-input px-5 py-3 w-100 rounded font-weight-bold bg-navy-blue text-center">Subscribe</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <h5 class="mt-5 text-secondary px-4 text-center privacy-details">We will never share your details with third parties. Read Our <a href="#" style="text-decoration: underline" class="text-navy-blue">Privacy Policy</a></h5>
-            </section>
-        </main>
-        <footer>
-            <div class="px-4 pt-5 pb-4 bg-near-white">
-                <!-- More Links -->
-                <div class="px-3 py-3">
-                    <p class="section-header text-center">BookMyCoSpace</p>
-                    <div class="text-center">
-                        <a href="#about" class="m-2 text-dark ">About Us</a>
-                        <a href="#" class="m-2 text-dark ">Portfolio</a>
-                        <a href="#" class="m-2 text-dark ">Privacy Policy</a>
-                        <a href="#" class="m-2 text-dark">Contact Us</a>
-                    </div>
-                    <div class="mx-3 my-4">
-                    <div class="my-3 text-center">
-                        <a href="https://www.facebook.com/bookmyspacemumbai" class="mr-3 text-dark fa fa-facebook"></a>
-                        <a href="https://www.instagram.com/bookmyspacemumbai/" class="mr-3 text-dark fa fa-instagram"></a>
-                        <a href="#" class="mr-3 text-dark fa fa-twitter"></a>
-                        <a href="#" class="mr-3 text-dark fa fa-youtube"></a>
-                    </div>
-                    </div>
-                </div>
-                <!-- Copyright Section -->
-                <div class="my-4 text-center">
-                    <p class="">Designed and Built with ❤ by <a href="https://mitshi.in" class="link">Mitshi Softwares</a> in Mumbai.</p>
-                </div>
+          </div>
+          <div class="col-sm-4 mt-sm-0 mt-4">
+            <img src="./static/images/icon3.png" class="mx-auto d-block card-icon"
+              alt="map-pin">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold text-center">Check in and work</h5>
+              <p class="card-text text-secondary text-center">Your host will be
+                expecting you on the day of check-in.
+                Show your booking confirmation and enjoy your experience!</p>
             </div>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function(){       
-            var scroll_pos = 0;
-            $(document).scroll(function() { 
-                scroll_pos = $(this).scrollTop();
-                if(scroll_pos > 100) {
-                    $("nav").css('background-color', '#071821');
-                } else {
-                    $("nav").css('background-color', 'transparent');
-                }
-            });
-            $('.book-slot-whatsapp-link').click(function(e) {
-                var whatsappLink = "https://wa.me/919082127573?text=";
-                var text = "Hey I want to book a slot in Vile Parle Coworking Space for ";
-                text += $('#numSeatsInput').val() || "__";
-                text += " seats on the "
-                text += $('#dateTimeInput').val() || "__";
-                whatsappLink += encodeURI(text);
-                $(this).attr('href', whatsappLink).click();
-            })
-        });
-        </script>
-    </body>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="section-header text-white">Events and Workshops Near You</h2>
+            <p class="my-5 alert alert-light">Sorry we are not holding any
+              events in an effort
+              to reduce spread of COVID.
+              <br>
+              Subscribe to our newsletter to get updated.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="section-header text-center news-article-header">Get Latest Updates and
+        Articles in your inbox.</h2>
+      <div class="container">
+        <form class="mt-5 bg-white py-4 px-3 rounded" id="subscribeForm">
+          <div class="form-row align-items-center justify-content-around container">
+            <div class="col-sm-9">
+              <label class="sr-only" for="emailId">Email</label>
+              <input type="email" class="form-control p-3 banner-input" required
+                id="emailId" placeholder="Email Address">
+            </div>
+            <div class="col-sm-3">
+              <button type="submit"
+                class="btn btn-primary banner-input px-5 py-3 w-100 rounded font-weight-bold bg-navy-blue text-center">Subscribe</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="alert alert-success" id="subscribeSuccess"
+              style="display: none">
+              Thank you for subscribing to our newsletter! Stay tuned.
+            </div>
+            <h5 class="mt-5 text-secondary px-4 text-center privacy-details">We will
+              never
+              share your details with third parties.</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="px-4 pt-5 pb-4 bg-near-white">
+      <!-- More Links -->
+      <div class="px-3 py-3">
+        <p class="section-header text-center">
+          <img src="bookmycospace.png" alt="" style="max-height: 140px;">
+        </p>
+        <div class="text-center">
+          <!--   <a href="#about" class="m-2 text-dark ">About Us</a> -->
+          <!--   <a href="#" class="m-2 text-dark ">Portfolio</a> -->
+          <!--   <a href="#" class="m-2 text-dark ">Privacy Policy</a> -->
+          <a href="" class="m-2 text-dark">contact@bookmycospace.com</a>
+        </div>
+        <!-- <div class="mx-3 my-4"> -->
+        <!--   <div class="my-3 text-center"> -->
+        <!--     <a href="https://www.facebook.com/bookmyspacemumbai" -->
+        <!--       class="mr-3 text-dark fa fa-facebook"></a> -->
+        <!--     <a href="https://www.instagram.com/bookmyspacemumbai/" -->
+        <!--       class="mr-3 text-dark fa fa-instagram"></a> -->
+        <!--     <a href="#" class="mr-3 text-dark fa fa-twitter"></a> -->
+        <!--     <a href="#" class="mr-3 text-dark fa fa-youtube"></a> -->
+        <!--   </div> -->
+        <!-- </div> -->
+      </div>
+      <!-- Copyright Section -->
+      <div class="my-4 text-center">
+        <p class="">Designed and Built with ❤ by <a href="https://mitshi.in"
+            class="link">Mitshi Softwares</a> in Mumbai.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      var scroll_pos = 0;
+      $(document).scroll(function() {
+        scroll_pos = $(this).scrollTop();
+        if (scroll_pos > 100) {
+          $("nav").css('background-color', '#071821');
+        } else {
+          $("nav").css('background-color', 'transparent');
+        }
+      });
+      $('.book-slot-whatsapp-link').click(function(e) {
+        var whatsappLink = "https://wa.me/919082127573?text=";
+        var text =
+          "Hey I want to book a slot in Vile Parle Coworking Space for ";
+        text += $('#numSeatsInput').val() || "__";
+        text += " seats on the "
+        text += $('#dateTimeInput').val() || "__";
+        whatsappLink += encodeURI(text);
+        $(this).attr('href', whatsappLink).click();
+      })
+      $("#subscribeForm").on("submit", function(e) {
+        e.preventDefault();
+        $("#subscribeSuccess").show();
+      });
+    });
+  </script>
+</body>
+
 </html>
